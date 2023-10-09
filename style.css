@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #340f54;
+    transition: background-color 0.5s ease;
+    background-size: 300% 300%;
+
+}
+
+button{
+    position: absolute;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    background: rgba(255,255,255,0.5);
+    overflow: hidden;
+    border-top: 1px solid rgba(75, 73, 73, 0.5);
+    border-left: 1px solid rgba(75,73,73,0.5);
+    backdrop-filter: blur(5px);
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    transition: transfrom 0.2s ease;
+}
+button:hover {
+    transform: scale(1.1) ;
+}
+
+@keyframes scaleAndFade {
+    0% {
+        transform: scale(1); /* Initial scale value for the animation */
+        opacity: 1; /* Initial opacity value for the animation */
+    }
+    50% {
+        transform: scale(1.2); /* Midway scale value for the animation */
+        opacity: 0.8; /* Midway opacity value for the animation */
+    }
+    100% {
+        transform: scale(1); /* Final scale value for the animation */
+        opacity: 1; /* Final opacity value for the animation */
+    }
+}
+
+/* Class for applying the scaling and fading animation */
+.change-background-animation {
+    animation: scaleAndFade 0.5s ease; /* Applies the defined keyframe animation with a 0.5s duration and ease timing function */
+}
